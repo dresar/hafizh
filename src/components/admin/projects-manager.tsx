@@ -277,8 +277,8 @@ export function ProjectsManager({ initialProjects }: { initialProjects: Project[
               label="Thumbnail Gambar Proyek (GitHub CDN)"
               name="thumbnailUrl"
               value={selectedProject?.thumbnailUrl || ''}
-              placeholder="https://raw.githubusercontent.com/dresar/PORTOFOLIO/main/asset/..."
-              hint="Unggah thumbnail langsung ke GitHub CDN dresar/PORTOFOLIO."
+              placeholder="https://raw.githubusercontent.com/dresar/hafizh/main/asset/..."
+              hint="Unggah thumbnail langsung ke GitHub CDN dresar/hafizh."
             />
 
             <VTextField

@@ -86,7 +86,7 @@ export function ProfileEditor({ profile }: { profile: Profile | null }) {
                 name="avatarUrl"
                 value={profile?.avatarUrl || ''}
                 placeholder="https://raw.githubusercontent.com/... atau /avatar.jpg"
-                hint="Unggah gambar untuk tersimpan ke GitHub CDN dresar/PORTOFOLIO, atau masukkan tautan gambar."
+                hint="Unggah gambar untuk tersimpan ke GitHub CDN dresar/hafizh, atau masukkan tautan gambar."
               />
 
               <VTextField

@@ -286,8 +286,8 @@ export function CertificatesManager({ initialCertificates }: { initialCertificat
             label="Gambar / Badge Sertifikat (GitHub CDN)"
             name="imageUrl"
             value={selectedItem?.imageUrl || ''}
-            placeholder="https://raw.githubusercontent.com/dresar/PORTOFOLIO/main/asset/..."
-            hint="Unggah berkas atau lencana sertifikat ke GitHub CDN dresar/PORTOFOLIO."
+            placeholder="https://raw.githubusercontent.com/dresar/hafizh/main/asset/..."
+            hint="Unggah berkas atau lencana sertifikat ke GitHub CDN dresar/hafizh."
           />
 
           <div className="flex items-center justify-between pt-2">
