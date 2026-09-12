@@ -9,12 +9,11 @@
     background-color: #020617;
     color: #f8fafc;
     overflow-x: hidden;
-    selection-background-color: #3b82f6;
+    selection-background-color: #334155;
     selection-color: #ffffff;
   }
 }
 
-/* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -33,7 +32,29 @@
   background: #334155;
 }
 
-/* Scroll Offset for Fixed Navbar */
 section[id] {
   scroll-margin-top: 80px;
+}
+
+@keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+  }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
+
+@keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+  }
+}
+
+.animate-spin-around {
+  animation: spin-around calc(var(--speed) * 2) infinite linear;
+}
+
+.animate-shimmer-slide {
+  animation: shimmer-slide var(--speed) ease-in-out infinite alternate;
 }
