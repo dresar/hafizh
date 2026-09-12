@@ -115,7 +115,7 @@ export function PublicNavbar() {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => setMobileDrawerOpen(true)}
-              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none"
+              className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none cursor-pointer touch-manipulation active:scale-95 transition-transform"
               aria-label="Buka Menu"
             >
               <VIcon name="fa-solid fa-bars" className="w-4 h-4" />
