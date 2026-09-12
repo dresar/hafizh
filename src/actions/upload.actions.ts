@@ -53,7 +53,7 @@ export async function uploadImageToGithubAction(formData: FormData): Promise<Upl
 
     const token = process.env.GITHUB_TOKEN;
     const owner = process.env.GITHUB_OWNER || 'dresar';
-    const repo = process.env.GITHUB_REPO || 'PORTOFOLIO';
+    const repo = process.env.GITHUB_REPO || 'hafizh';
     const branch = process.env.GITHUB_BRANCH || 'main';
 
     if (!token) {
