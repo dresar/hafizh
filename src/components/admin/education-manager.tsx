@@ -205,11 +205,10 @@ export function EducationManager({ initialEducations }: { initialEducations: Edu
       >
         <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
           <VTextField
-            label="Nama Institusi / Universitas"
+            label="Nama Institusi / Universitas (Opsional)"
             name="institution"
             defaultValue={selectedItem?.institution || ''}
-            placeholder="Contoh: Universitas Indonesia"
-            required
+            placeholder="Contoh: Universitas Sumatera Utara"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

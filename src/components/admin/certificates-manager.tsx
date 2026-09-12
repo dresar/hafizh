@@ -216,17 +216,16 @@ export function CertificatesManager({ initialCertificates }: { initialCertificat
         <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VTextField
-              label="Judul Sertifikat"
+              label="Judul Sertifikat (Opsional)"
               name="title"
               defaultValue={selectedItem?.title || ''}
-              placeholder="Contoh: AWS Certified Solutions Architect"
-              required
+              placeholder="Contoh: Sertifikasi Keahlian Komputer"
             />
             <VTextField
               label="Organisasi Penerbit (Opsional)"
               name="issuer"
               defaultValue={selectedItem?.issuer || ''}
-              placeholder="Contoh: Amazon Web Services / Dicoding"
+              placeholder="Contoh: Universitas Sumatera Utara / BNSP"
             />
           </div>
 
@@ -247,16 +246,16 @@ export function CertificatesManager({ initialCertificates }: { initialCertificat
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VTextField
-              label="ID Kredensial / Nomor Lisensi"
+              label="ID Kredensial / Nomor Lisensi (Opsional)"
               name="credentialId"
               defaultValue={selectedItem?.credentialId || ''}
               placeholder="Contoh: CERT-2024-998"
             />
             <VTextField
-              label="URL Verifikasi Kredensial"
+              label="URL Verifikasi Kredensial (Opsional)"
               name="credentialUrl"
               defaultValue={selectedItem?.credentialUrl || ''}
-              placeholder="https://..."
+              placeholder="https://... (Opsional)"
             />
           </div>
 

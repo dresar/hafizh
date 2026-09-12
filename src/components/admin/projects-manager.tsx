@@ -243,11 +243,10 @@ export function ProjectsManager({ initialProjects }: { initialProjects: Project[
         <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VTextField
-              label="Judul Proyek"
+              label="Judul Proyek (Opsional)"
               name="title"
               defaultValue={selectedProject?.title || ''}
-              placeholder="Nama proyek aplikasi"
-              required
+              placeholder="Nama proyek aplikasi (bisa dikosongkan)"
             />
             <VTextField
               label="Slug URL (Otomatis jika kosong)"
@@ -316,16 +315,16 @@ export function ProjectsManager({ initialProjects }: { initialProjects: Project[
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VTextField
-              label="URL Demo Langsung (Live Demo)"
+              label="URL Demo Langsung (Live Demo) (Opsional)"
               name="demoUrl"
               defaultValue={selectedProject?.demoUrl || ''}
-              placeholder="https://example.com"
+              placeholder="https://example.com (Opsional)"
             />
             <VTextField
-              label="URL Repositori GitHub"
+              label="URL Repositori GitHub (Opsional)"
               name="repoUrl"
               defaultValue={selectedProject?.repoUrl || ''}
-              placeholder="https://github.com/..."
+              placeholder="https://github.com/... (Opsional)"
             />
           </div>
 

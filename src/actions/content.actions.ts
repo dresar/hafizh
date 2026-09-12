@@ -47,10 +47,14 @@ export async function updateProfileAction(data: unknown): Promise<ActionResponse
     await ensureAuthenticated();
     const validated = profileSchema.safeParse(data);
     if (!validated.success) {
+      const errorMap = validated.error.flatten().fieldErrors;
+      const details = Object.entries(errorMap)
+        .map(([k, v]) => `${k}: ${v?.join(', ')}`)
+        .join(' | ');
       return {
         success: false,
-        error: 'Data profil tidak valid.',
-        fieldErrors: validated.error.flatten().fieldErrors,
+        error: details ? `Data profil tidak valid (${details})` : 'Data profil tidak valid.',
+        fieldErrors: errorMap,
       };
     }
 

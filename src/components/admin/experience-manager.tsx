@@ -209,11 +209,10 @@ export function ExperienceManager({ initialExperiences }: { initialExperiences: 
         <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VTextField
-              label="Perusahaan / Instansi"
+              label="Perusahaan / Instansi (Opsional)"
               name="company"
               defaultValue={selectedItem?.company || ''}
-              placeholder="Nama perusahaan"
-              required
+              placeholder="Nama perusahaan atau instansi"
             />
             <VTextField
               label="Posisi / Jabatan (Opsional)"

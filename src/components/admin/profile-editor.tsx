@@ -51,7 +51,7 @@ export function ProfileEditor({ profile }: { profile: Profile | null }) {
           <VCardHeader>
             <div>
               <VCardTitle>Identitas Diri & Pengenalan</VCardTitle>
-              <VCardSubtitle>Informasi utama yang tampil pada Hero Section dan About</VCardSubtitle>
+              <VCardSubtitle>Seluruh isian bersifat opsional dan fleksibel</VCardSubtitle>
             </div>
           </VCardHeader>
           <VCardContent className="space-y-4">
@@ -82,19 +82,20 @@ export function ProfileEditor({ profile }: { profile: Profile | null }) {
 
             <div className="space-y-4">
               <VImageUploader
-                label="Foto Profil / Avatar (GitHub CDN)"
+                label="Foto Profil / Avatar (GitHub CDN) (Opsional)"
                 name="avatarUrl"
                 value={profile?.avatarUrl || ''}
-                placeholder="https://raw.githubusercontent.com/dresar/PORTOFOLIO/main/asset/..."
-                hint="Pilih gambar untuk langsung diunggah ke GitHub CDN dresar/PORTOFOLIO."
+                placeholder="https://raw.githubusercontent.com/... atau /avatar.jpg"
+                hint="Unggah gambar untuk tersimpan ke GitHub CDN dresar/PORTOFOLIO, atau masukkan tautan gambar."
               />
 
               <VTextField
-                label="URL Dokumen Resume / CV (PDF)"
+                label="URL Dokumen Resume / CV (PDF / Web) (Opsional)"
                 name="resumeUrl"
                 defaultValue={profile?.resumeUrl || ''}
-                placeholder="https://... (Google Drive / Cloud Storage)"
+                placeholder="/cv-hafizh.pdf atau tautan online Google Drive"
                 prependInnerIcon="fa-solid fa-download"
+                hint="Dapat berupa path internal (/cv-hafizh.pdf) atau tautan luar."
               />
             </div>
 
@@ -118,56 +119,57 @@ export function ProfileEditor({ profile }: { profile: Profile | null }) {
           <VCardHeader>
             <div>
               <VCardTitle>Informasi Kontak & Media Sosial</VCardTitle>
-              <VCardSubtitle>Tautan komunikasi yang tertera di navigasi dan bagian kontak</VCardSubtitle>
+              <VCardSubtitle>Seluruh tautan dan kontak bersifat opsional</VCardSubtitle>
             </div>
           </VCardHeader>
           <VCardContent className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <VTextField
-                label="Alamat Email Publik"
+                label="Alamat Email Publik (Opsional)"
                 name="email"
                 type="email"
                 defaultValue={profile?.email || ''}
-                placeholder="email@domain.com"
+                placeholder="email@domain.com (Opsional)"
                 prependInnerIcon="fa-solid fa-envelope"
               />
               <VTextField
-                label="Lokasi Domisili"
+                label="Lokasi Domisili (Opsional)"
                 name="location"
                 defaultValue={profile?.location || ''}
-                placeholder="Contoh: Jakarta, Indonesia"
+                placeholder="Contoh: Lubuk Pakam, Sumatera Utara"
                 prependInnerIcon="fa-solid fa-location-dot"
               />
               <VTextField
-                label="Nomor Kontak / WhatsApp"
+                label="Nomor Kontak / Telepon (Opsional)"
                 name="phone"
                 defaultValue={profile?.phone || ''}
-                placeholder="+62 8..."
+                placeholder="Contoh: 0853-6352-0813"
                 prependInnerIcon="fa-solid fa-phone"
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <VTextField
-                label="URL Repositori GitHub"
+                label="URL Repositori GitHub (Opsional)"
                 name="githubUrl"
                 defaultValue={profile?.githubUrl || ''}
                 placeholder="https://github.com/username"
                 prependInnerIcon="fa-brands fa-github"
               />
               <VTextField
-                label="URL Profil LinkedIn"
+                label="URL Profil LinkedIn (Opsional)"
                 name="linkedinUrl"
                 defaultValue={profile?.linkedinUrl || ''}
                 placeholder="https://linkedin.com/in/username"
                 prependInnerIcon="fa-brands fa-linkedin"
               />
               <VTextField
-                label="Tautan WhatsApp Direct"
+                label="Tautan / Nomor WhatsApp (Opsional)"
                 name="whatsappUrl"
                 defaultValue={profile?.whatsappUrl || ''}
-                placeholder="https://wa.me/628..."
+                placeholder="085363520813 atau https://wa.me/..."
                 prependInnerIcon="fa-brands fa-whatsapp"
+                hint="Dapat berupa nomor hp langsung atau tautan wa.me."
               />
             </div>
           </VCardContent>

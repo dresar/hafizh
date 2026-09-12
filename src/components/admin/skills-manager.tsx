@@ -232,11 +232,10 @@ export function SkillsManager({ initialSkills }: { initialSkills: Skill[] }) {
         <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <VTextField
-              label="Nama Keahlian"
+              label="Nama Keahlian (Opsional)"
               name="name"
               defaultValue={selectedSkill?.name || ''}
               placeholder="Contoh: Next.js, PostgreSQL, Docker"
-              required
             />
             <div className="w-full flex flex-col gap-1.5">
               <label className="text-xs font-semibold text-slate-300">Kategori</label>
