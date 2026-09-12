@@ -142,18 +142,41 @@ export function CertificatesManager({ initialCertificates }: { initialCertificat
                   {certificatesList.map((item) => (
                     <tr key={item.id} className="hover:bg-slate-800/30 transition-colors">
                       <td className="py-3.5 px-4">
-                        <div className="font-bold text-white text-sm">{item.title}</div>
-                        {item.credentialUrl && (
-                          <a
-                            href={item.credentialUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[11px] text-blue-400 hover:underline inline-flex items-center gap-1 mt-0.5"
-                          >
-                            <span>Verifikasi Online</span>
-                            <VIcon name="fa-solid fa-arrow-up-right-from-square" className="w-2.5 h-2.5" />
-                          </a>
-                        )}
+                        <div className="flex items-center gap-3">
+                          {item.imageUrl ? (
+                            <a
+                              href={item.imageUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="relative w-10 h-10 rounded-md overflow-hidden bg-slate-950 border border-slate-800 flex-shrink-0 group/img"
+                              title="Lihat berkas sertifikat"
+                            >
+                              <img
+                                src={item.imageUrl}
+                                alt={item.title}
+                                className="w-full h-full object-cover group-hover/img:scale-110 transition-transform"
+                              />
+                            </a>
+                          ) : (
+                            <div className="w-10 h-10 rounded-md bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-600 flex-shrink-0">
+                              <VIcon name="fa-solid fa-certificate" className="w-4 h-4" />
+                            </div>
+                          )}
+                          <div className="min-w-0">
+                            <div className="font-bold text-white text-sm truncate max-w-xs">{item.title}</div>
+                            {item.credentialUrl && (
+                              <a
+                                href={item.credentialUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[11px] text-blue-400 hover:underline inline-flex items-center gap-1 mt-0.5"
+                              >
+                                <span>Verifikasi Online</span>
+                                <VIcon name="fa-solid fa-arrow-up-right-from-square" className="w-2.5 h-2.5" />
+                              </a>
+                            )}
+                          </div>
+                        </div>
                       </td>
                       <td className="py-3.5 px-4 text-slate-200 font-medium">{item.issuer}</td>
                       <td className="py-3.5 px-4 text-slate-300">
